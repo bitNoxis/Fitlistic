@@ -198,12 +198,14 @@ def reminder_gui(root, user_name):
     cal = Calendar(root, selectmode='day', year=2024, month=8, day=19)
     cal.place(relx=0.5, y=350, anchor="center")
 
+    # Using the date from the calendar to display the selected date
     def on_date_select():
         selected_date = cal.get_date()
         reminder_label = tk.Label(root,
                                   text=f"You will be reminded to do a workout on the {selected_date}",
                                   font=('Arial', 15, 'italic'), bg="white", fg="black", wraplength=550)
         reminder_label.place(relx=0.5, y=575, anchor="center")
+
 
     # Button to confirm the selected date
     set_reminder_button = RoundedButton(root,
